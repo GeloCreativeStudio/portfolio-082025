@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 414.42" fill="currentColor" aria-label="Wordmark Logo">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400&amp;display=swap');
+    .pixel { font-family: 'Pixelify Sans', sans-serif; }
+    text { font-size: 200px; }
+  </style>
+  <text x="0" y="320.82">
+    <tspan class="pixel">ANGELO</tspan>
+    <tspan class="pixel" x="758" y="320.82">MANALO</tspan>
+  </text>
+</svg>
