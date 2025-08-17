@@ -6,7 +6,7 @@
 
 <!-- [![GitHub stars](https://img.shields.io/github/stars/GeloCreativeStudio/portfolio-082025?style=social)](https://github.com/GeloCreativeStudio/portfolio-082025/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/GeloCreativeStudio/portfolio-082025?style=social)](https://github.com/GeloCreativeStudio/portfolio-082025/network) -->
-[![License](https://img.shields.io/github/license/GeloCreativeStudio/portfolio-082025)](https://github.com/GeloCreativeStudio/portfolio-082025/blob/main/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 <!-- [**Live Demo**](https://www.angelomanalo.me) -->
 
