@@ -30,7 +30,7 @@ export default function ProjectCard({
       {/* Image Container */}
       <div className="relative">
         <Image
-          className="h-96 w-full rounded-md object-cover object-top grayscale transition-all duration-500 hover:grayscale-0 group-hover:h-[22.5rem] group-hover:rounded-xl"
+          className="h-96 w-full rounded-md object-cover object-top grayscale-0 md:grayscale transition-all duration-500 md:hover:grayscale-0 md:group-hover:h-[22.5rem] md:group-hover:rounded-xl md:group-focus-within:h-[22.5rem] md:group-focus-within:rounded-xl"
           src={avatar}
           alt={`${name} project screenshot`}
           width={826}
@@ -40,7 +40,7 @@ export default function ProjectCard({
 
         {/* Image Credit Overlay - Shows on hover */}
         {imageCredit && (
-          <div className="absolute bottom-2 left-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <div className="absolute bottom-2 left-2 opacity-100 md:opacity-0 transition-opacity duration-300 md:group-hover:opacity-100 md:group-focus-within:opacity-100">
             <div className="rounded-md bg-black/70 px-2 py-1 text-xs text-white backdrop-blur-sm">
               Illustration by{' '}
               <a
@@ -59,14 +59,14 @@ export default function ProjectCard({
       {/* Content */}
       <div className="px-2 pt-2 sm:pb-0 sm:pt-4">
         <div className="flex justify-between">
-          <h3 className="text-base font-medium transition-all duration-500 group-hover:tracking-wider">
+          <h3 className="text-base font-medium transition-all duration-500 md:group-hover:tracking-wider md:group-focus-within:tracking-wider">
             {name}
           </h3>
           <span className="text-xs">_0{index + 1}</span>
         </div>
 
         <div className="mt-1 flex items-center justify-between">
-          <span className="text-muted-foreground inline-block translate-y-6 text-sm opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+          <span className="text-muted-foreground inline-block text-sm transition duration-300 translate-y-0 opacity-100 md:translate-y-6 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:group-focus-within:translate-y-0 md:group-focus-within:opacity-100">
             {role}
           </span>
         </div>
