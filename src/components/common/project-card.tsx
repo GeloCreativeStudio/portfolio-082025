@@ -2,19 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Code2 } from 'lucide-react';
-
-interface ProjectCardProps {
-  name: string;
-  role: string;
-  avatar: string;
-  codeLink: string;
-  demoLink: string;
-  index: number;
-  imageCredit?: {
-    artist: string;
-    artistLink: string;
-  };
-}
+import type { ReactElement } from 'react';
 
 export default function ProjectCard({
   name,
@@ -24,7 +12,7 @@ export default function ProjectCard({
   demoLink,
   index,
   imageCredit,
-}: ProjectCardProps) {
+}: ProjectCardProps): ReactElement {
   return (
     <div className="group relative overflow-hidden">
       {/* Image Container */}
@@ -35,7 +23,7 @@ export default function ProjectCard({
           alt={`${name} project screenshot`}
           width={826}
           height={1239}
-          priority={false}
+          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
         />
 
         {/* Image Credit Overlay - Shows on hover */}
@@ -73,20 +61,58 @@ export default function ProjectCard({
 
         {/* Action Buttons - Always visible */}
         <div className="mt-4 flex gap-2">
-          <Button asChild variant="outline" size="sm" className="flex-1 justify-center">
-            <Link href={codeLink} target="_blank" rel="noopener noreferrer">
+          {codeLink && codeLink !== '#' ? (
+            <Button asChild variant="outline" size="sm" className="flex-1 justify-center">
+              <Link href={codeLink} target="_blank" rel="noopener noreferrer">
+                <Code2 size={16} />
+                Code
+              </Link>
+            </Button>
+          ) : (
+            <Button
+              variant="outline"
+              size="sm"
+              className="flex-1 justify-center"
+              disabled
+            >
               <Code2 size={16} />
               Code
-            </Link>
-          </Button>
-          <Button asChild variant="default" size="sm" className="flex-1 justify-center">
-            <Link href={demoLink} target="_blank" rel="noopener noreferrer">
+            </Button>
+          )}
+
+          {demoLink && demoLink !== '#' ? (
+            <Button asChild variant="default" size="sm" className="flex-1 justify-center">
+              <Link href={demoLink} target="_blank" rel="noopener noreferrer">
+                <ExternalLink size={16} />
+                Demo
+              </Link>
+            </Button>
+          ) : (
+            <Button
+              variant="default"
+              size="sm"
+              className="flex-1 justify-center"
+              disabled
+            >
               <ExternalLink size={16} />
               Demo
-            </Link>
-          </Button>
+            </Button>
+          )}
         </div>
       </div>
     </div>
   );
+}
+
+interface ProjectCardProps {
+  name: string;
+  role: string;
+  avatar: string;
+  codeLink: string;
+  demoLink: string;
+  index: number;
+  imageCredit?: {
+    artist: string;
+    artistLink: string;
+  };
 }

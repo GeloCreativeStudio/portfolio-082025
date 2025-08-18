@@ -6,19 +6,24 @@ import FeaturedProjects from '@/components/sections/featured-projects';
 import FeaturedDesigns from '@/components/sections/featured-designs';
 import Contact from '@/components/sections/contact';
 import Footer from '@/components/layout/footer';
-import SmoothScroll from '@/components/common/smooth-scroll';
+import SmoothScrollClient from '@/components/common/smooth-scroll-client';
+import { Suspense } from 'react';
 
 export default function Home() {
   return (
     <>
-      <SmoothScroll />
+      <Suspense fallback={null}>
+        <SmoothScrollClient />
+      </Suspense>
       <Header />
-      <HeroSection />
-      <AboutMe />
-      <FeaturedProjects />
-      <FeaturedDesigns />
-      <TechnicalSkills />
-      <Contact />
+      <main className="overflow-x-hidden">
+        <HeroSection />
+        <AboutMe />
+        <FeaturedProjects />
+        <FeaturedDesigns />
+        <TechnicalSkills />
+        <Contact />
+      </main>
       <Footer />
     </>
   );
