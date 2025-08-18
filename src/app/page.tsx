@@ -16,12 +16,14 @@ export default function Home() {
         <SmoothScrollClient />
       </Suspense>
       <Header />
-      <HeroSection />
-      <AboutMe />
-      <FeaturedProjects />
-      <FeaturedDesigns />
-      <TechnicalSkills />
-      <Contact />
+      <main className="overflow-x-hidden">
+        <HeroSection />
+        <AboutMe />
+        <FeaturedProjects />
+        <FeaturedDesigns />
+        <TechnicalSkills />
+        <Contact />
+      </main>
       <Footer />
     </>
   );
