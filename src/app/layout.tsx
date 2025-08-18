@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: '%s | Angelo Manalo',
   },
   description:
-    'Angelo Manalo — BSCS AI student at Far Eastern University Institute of Technology. Portfolio showcasing projects, development, and design work. Keywords: angelo lopez manalo, angelo manalo feu, angelo manalo ai.',
+    'Angelo Manalo — BSCS AI student at Far Eastern University Institute of Technology. Portfolio showcasing projects, development, and design work.',
   keywords: [
     // Primary name/brand and intent
     'angelo manalo',
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     title: 'Angelo Manalo | Portfolio',
     siteName: 'Angelo Manalo',
     description:
-      'Portfolio of Angelo Manalo, BSCS AI student at FEU Tech — AI projects, web dev, and design.',
+      'Portfolio of Angelo Manalo, BSCS AI student at FEU Tech — design, code, and AI.',
     images: [
       {
         url: '/avatar-light-mode.jpg',
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Angelo Manalo | Portfolio',
     description:
-      'Portfolio of Angelo Manalo, BSCS AI student at FEU Tech — AI projects, web dev, and design.',
+      'Portfolio of Angelo Manalo, BSCS AI student at FEU Tech — design, code, and AI.',
     images: ['/avatar-light-mode.jpg'],
   },
   icons: {
