@@ -15,6 +15,7 @@ export default function HeroSection() {
                 alt="Angelo Manalo"
                 width={150}
                 height={150}
+                sizes="150px"
                 className="rounded-full mx-auto border-4 border-border dark:hidden"
                 priority
               />
@@ -23,6 +24,7 @@ export default function HeroSection() {
                 alt="Angelo Manalo"
                 width={150}
                 height={150}
+                sizes="150px"
                 className="rounded-full mx-auto border-4 border-border hidden dark:block"
                 priority
               />

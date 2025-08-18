@@ -35,6 +35,7 @@ export default function ProjectCard({
           alt={`${name} project screenshot`}
           width={826}
           height={1239}
+          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           priority={false}
         />
 
@@ -73,14 +74,36 @@ export default function ProjectCard({
 
         {/* Action Buttons - Always visible */}
         <div className="mt-4 flex gap-2">
-          <Button asChild variant="outline" size="sm" className="flex-1 justify-center">
-            <Link href={codeLink} target="_blank" rel="noopener noreferrer">
+          <Button
+            asChild
+            variant="outline"
+            size="sm"
+            className="flex-1 justify-center"
+            disabled={!codeLink || codeLink === '#'}
+          >
+            <Link
+              href={codeLink && codeLink !== '#' ? codeLink : '#'}
+              target={codeLink && codeLink !== '#' ? '_blank' : undefined}
+              rel={codeLink && codeLink !== '#' ? 'noopener noreferrer' : undefined}
+              aria-disabled={!codeLink || codeLink === '#'}
+            >
               <Code2 size={16} />
               Code
             </Link>
           </Button>
-          <Button asChild variant="default" size="sm" className="flex-1 justify-center">
-            <Link href={demoLink} target="_blank" rel="noopener noreferrer">
+          <Button
+            asChild
+            variant="default"
+            size="sm"
+            className="flex-1 justify-center"
+            disabled={!demoLink || demoLink === '#'}
+          >
+            <Link
+              href={demoLink && demoLink !== '#' ? demoLink : '#'}
+              target={demoLink && demoLink !== '#' ? '_blank' : undefined}
+              rel={demoLink && demoLink !== '#' ? 'noopener noreferrer' : undefined}
+              aria-disabled={!demoLink || demoLink === '#'}
+            >
               <ExternalLink size={16} />
               Demo
             </Link>
