@@ -1,8 +1,10 @@
+/** Attribution metadata for project preview images. */
 export interface ImageCredit {
   artist: string;
   artistLink: string;
 }
 
+/** Data model for featured projects displayed in the Projects section. */
 export interface Project {
   name: string;
   role: string;
@@ -12,6 +14,7 @@ export interface Project {
   imageCredit?: ImageCredit;
 }
 
+/** Curated list of featured projects. */
 export const projects: readonly Project[] = [
   {
     name: 'MARS',

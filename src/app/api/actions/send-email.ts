@@ -16,7 +16,17 @@ export type SendEmailResult =
   | { success: true; data: unknown }
   | { success: false; message?: string; error?: string };
 
-/** Server action function sending a contact email via Resend. */
+/**
+ * Server action that validates form input and sends a contact email via Resend.
+ *
+ * - Verifies required environment configuration
+ * - Validates and normalizes inputs, returning the first error message
+ * - Applies a honeypot check to reduce spam
+ * - Sends a React-based email template using Resend
+ *
+ * @param formData FormData captured from the contact form submission.
+ * @returns A discriminated result for success or failure with details.
+ */
 export const sendEmail = async (formData: FormData): Promise<SendEmailResult> => {
   if (!process.env.RESEND_API_KEY) {
     console.error('RESEND_API_KEY is not configured.');

@@ -8,6 +8,9 @@ interface NavigationLinkProps {
   onClick?: () => void;
 }
 
+/**
+ * Styled Next.js `Link` with sensible defaults for header/footer navigation.
+ */
 export function NavigationLink({
   href,
   children,

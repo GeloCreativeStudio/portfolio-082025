@@ -9,6 +9,15 @@ import Footer from '@/components/layout/footer';
 import SmoothScrollClient from '@/components/common/smooth-scroll-client';
 import { Suspense } from 'react';
 
+/**
+ * Home page route component.
+ *
+ * Composes the single-page portfolio by rendering all top-level sections in
+ * order. Client-only smooth scrolling is wrapped in Suspense so it does not
+ * block server rendering.
+ *
+ * @returns The full page layout including header, main sections, and footer.
+ */
 export default function Home() {
   return (
     <>

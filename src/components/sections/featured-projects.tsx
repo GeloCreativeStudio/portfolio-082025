@@ -1,6 +1,11 @@
 import ProjectCard from '../common/project-card';
 import { projects } from '@/lib/data/featured-projects';
 
+/**
+ * Section showcasing selected projects with code/demo links.
+ *
+ * Renders a responsive grid of `ProjectCard`s from the `projects` data source.
+ */
 export default function FeaturedProjects() {
   return (
     <section id="projects" className="py-30 border-t border-border">

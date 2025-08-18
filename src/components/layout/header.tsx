@@ -8,6 +8,13 @@ import { NavigationLink } from '@/components/common/navigation-link';
 import { navigationItems, actionButtons } from '@/lib/data/navigation';
 import React from 'react';
 
+/**
+ * Site header with responsive navigation and action buttons.
+ *
+ * - Desktop: inline navigation links and actions
+ * - Mobile: hamburger menu toggles a slide-down panel with links and actions
+ * - Includes theme toggle and external action buttons from data config
+ */
 export const Header = () => {
   const [menuState, setMenuState] = React.useState(false);
 

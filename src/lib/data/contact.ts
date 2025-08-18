@@ -1,6 +1,4 @@
-/**
- * Personal information and contact details
- */
+/** Personal information and contact details used across the site. */
 export const personalInfo = {
   name: 'Angelo Manalo', //Replace with your name
   email: 'angelomanalo@proton.me', // Replace with your email

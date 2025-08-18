@@ -4,6 +4,16 @@ import { Button } from '@/components/ui/button';
 import { ExternalLink, Code2 } from 'lucide-react';
 import type { ReactElement } from 'react';
 
+/**
+ * Project card component.
+ *
+ * Displays a preview image with optional artist credit overlay, project name,
+ * role, and action buttons (Code/Demo). Buttons gracefully degrade to disabled
+ * state when links are absent.
+ *
+ * @param props Component properties controlling content and links.
+ * @returns A responsive, hover-animated project card element.
+ */
 export default function ProjectCard({
   name,
   role,
@@ -104,6 +114,12 @@ export default function ProjectCard({
   );
 }
 
+/**
+ * Props for `ProjectCard`.
+ *
+ * - `imageCredit` is optional attribution for the preview image. When provided,
+ *   it appears on hover as an overlay with an external link to the artist.
+ */
 interface ProjectCardProps {
   name: string;
   role: string;

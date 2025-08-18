@@ -3,6 +3,9 @@ import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { ReactNode } from 'react';
 
+/**
+ * About section describing background and interests with simple feature cards.
+ */
 export default function AboutMe() {
   return (
     <section id="about" className="py-30 border-t border-border">
@@ -44,6 +47,7 @@ interface InterestIconProps {
   label: string;
 }
 
+/** Displays a single interest icon with label using masked SVG. */
 const InterestIcon = ({ icon, label }: InterestIconProps) => (
   <div className="flex flex-col items-center gap-1.5">
     <div className="bg-linear-to-b from-border size-fit rounded-lg to-transparent p-px">
@@ -66,6 +70,7 @@ interface FeatureCardProps {
   className?: string;
 }
 
+/** Simple card wrapper with decorative corner accents. */
 const FeatureCard = ({ children, className }: FeatureCardProps) => (
   <Card className={cn('group relative rounded-none shadow-zinc-950/5', className)}>
     <CardDecorator />
@@ -73,6 +78,7 @@ const FeatureCard = ({ children, className }: FeatureCardProps) => (
   </Card>
 );
 
+/** Draws the four corner accents for `FeatureCard`. */
 const CardDecorator = () => (
   <>
     <span className="border-primary absolute -left-px -top-px block size-2 border-l-2 border-t-2"></span>

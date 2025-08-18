@@ -6,6 +6,13 @@ import { usePathname } from 'next/navigation';
 const DURATION_MS = 1200;
 const SCRAMBLE_CHARS = '.';
 
+/**
+ * Animate the last word of every visible <h1> with a brief scramble effect.
+ *
+ * On first intersection, replaces the last word with a span and animates
+ * through pseudo-random characters before resolving to the final text. Cleans
+ * up IntersectionObserver and pending RAF callbacks on unmount or route change.
+ */
 function runScramble(element: HTMLElement, finalText: string) {
   const length = finalText.length;
   if (length === 0) return () => {};

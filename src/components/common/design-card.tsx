@@ -6,6 +6,12 @@ interface DesignCardProps {
   imageAlt: string;
 }
 
+/**
+ * Simple design showcase card.
+ *
+ * Renders a fixed-aspect thumbnail using Next/Image for responsive loading and
+ * automatic optimization.
+ */
 export default function DesignCard({ imageSrc, imageAlt }: DesignCardProps) {
   return (
     <div className="group relative aspect-[4/5] w-48 lg:w-64 xl:w-72 overflow-hidden rounded-md bg-muted">

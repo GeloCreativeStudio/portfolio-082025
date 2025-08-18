@@ -4,6 +4,16 @@ import { ScrollSpyNavigation } from '@/components/common/scroll-spy-navigation';
 import { ScrambleH1 } from '@/components/common/scramble-h1';
 import './globals.css';
 
+/**
+ * App root layout and global metadata configuration.
+ *
+ * - Defines SEO metadata (Open Graph, Twitter, robots) with absolute URLs based
+ *   on `NEXT_PUBLIC_SITE_URL`.
+ * - Exposes viewport hints for theming.
+ * - Wraps all routes with providers and persistent UI elements.
+ */
+
+/** Site-wide metadata used by Next.js to generate head tags and social cards. */
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: {
@@ -93,10 +103,20 @@ export const metadata: Metadata = {
   manifest: '/site.webmanifest',
 };
 
+/** Viewport hints for supported browsers. */
 export const viewport: Viewport = {
   themeColor: '#000000',
 };
 
+/**
+ * Root layout that renders the <html> and <body> shells for every route.
+ *
+ * Injects JSON-LD for basic SEO, the theme provider, and persistent UI chrome
+ * (animated title and scroll spy navigation).
+ *
+ * @param children React nodes for the current route segment.
+ * @returns The global HTML document layout.
+ */
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {

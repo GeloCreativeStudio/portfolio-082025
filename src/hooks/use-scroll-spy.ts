@@ -2,6 +2,16 @@
 
 import { useState, useEffect } from 'react';
 
+/**
+ * Tracks which section is currently in view based on scroll position.
+ *
+ * Computes the active section id from an ordered list of section element ids
+ * and an optional offset to trigger activation earlier or later.
+ *
+ * @param sectionIds Ordered list of section ids to observe.
+ * @param offset Pixel offset added to `window.scrollY` when determining the active section. Defaults to 100.
+ * @returns The id of the active section, or an empty string when none match.
+ */
 export function useScrollSpy(sectionIds: string[], offset: number = 100) {
   const [activeSection, setActiveSection] = useState<string>('');
 

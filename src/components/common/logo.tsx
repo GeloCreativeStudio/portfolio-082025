@@ -14,6 +14,12 @@ const sizeClasses = {
   xl: 'h-12', // 48px - footer/prominent display
 };
 
+/**
+ * SVG logomark component.
+ *
+ * Uses `currentColor` and inherits from CSS `--foreground` via className for
+ * theme-aware coloring. Exposes size presets while allowing additional classes.
+ */
 export const Logo = ({ className, size = 'md' }: LogoProps) => {
   // Always use CSS foreground variable for fill color
   return (

@@ -4,6 +4,12 @@ import { Github, Linkedin } from 'lucide-react';
 import { NavigationLink } from '@/components/common/navigation-link';
 import { footerNavigationItems, socialLinks } from '@/lib/data/navigation';
 
+/**
+ * Footer section with logo, navigation links, social icons, and tech credits.
+ *
+ * Pulls link data from centralized navigation config and renders masked SVG
+ * icons for the tech stack credits.
+ */
 export default function FooterSection() {
   return (
     <footer className="py-16 md:py-30 border-t border-border">

@@ -8,6 +8,13 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card } from '@/components/ui/card';
 import { sendEmail, type SendEmailResult } from '@/app/api/actions/send-email';
 
+/**
+ * Contact section with server-action powered form submission.
+ *
+ * - Includes a hidden honeypot field for basic bot mitigation
+ * - Uses `useTransition` for non-blocking server action calls
+ * - Displays success or error feedback from the action result
+ */
 export default function Contact() {
   const [isPending, startTransition] = useTransition();
   const [result, setResult] = useState<SendEmailResult | null>(null);

@@ -5,6 +5,12 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
 
+/**
+ * Initializes Lenis smooth scrolling and wires it to GSAP ScrollTrigger.
+ *
+ * Runs only on the client. Keeps ScrollTrigger in sync with Lenis and cleans up
+ * animations, RAF loop, and Lenis instance on unmount.
+ */
 export default function SmoothScroll() {
   useEffect(() => {
     const lenis = new Lenis({

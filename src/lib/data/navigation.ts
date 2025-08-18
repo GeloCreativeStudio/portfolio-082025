@@ -1,4 +1,8 @@
-// Navigation configuration for consistent navigation across components
+/**
+ * Navigation configuration used across header and footer.
+ *
+ * Keep names and order in sync with on-page sections for a consistent UX.
+ */
 export interface NavigationItem {
   name: string;
   href: string;
@@ -6,6 +10,7 @@ export interface NavigationItem {
 }
 
 // Main navigation items matching the page structure order
+/** Primary navigation items in on-page order. */
 export const navigationItems: NavigationItem[] = [
   {
     name: 'Home',
@@ -39,7 +44,7 @@ export const navigationItems: NavigationItem[] = [
   },
 ];
 
-// Social media links
+/** Social media links rendered in the footer. */
 export const socialLinks = [
   {
     name: 'GitHub',
@@ -53,7 +58,7 @@ export const socialLinks = [
   },
 ];
 
-// Action buttons for header
+/** Action buttons rendered on the right side of the header. */
 export interface ActionButton {
   name: string;
   href: string;
@@ -78,5 +83,5 @@ export const actionButtons: ActionButton[] = [
   },
 ];
 
-// Footer specific navigation (can include additional links)
+/** Footer navigation (mirrors primary navigation; extend as needed). */
 export const footerNavigationItems: NavigationItem[] = [...navigationItems];

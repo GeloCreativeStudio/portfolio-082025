@@ -3,6 +3,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
+/**
+ * Hero section introducing the portfolio owner with avatar, name, and CTAs.
+ *
+ * Uses separate assets for light/dark to ensure optimal contrast, and provides
+ * primary and secondary calls to action.
+ */
 export default function HeroSection() {
   return (
     <section

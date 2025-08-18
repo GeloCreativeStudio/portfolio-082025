@@ -4,6 +4,9 @@ import { ProgressiveBlur } from '@/components/ui/progressive-blur';
 import { skillsData } from '@/lib/data/technical-skills';
 
 // Individual skill icon component with responsive sizing
+/**
+ * Displays a single technology icon using CSS masks for consistent coloring.
+ */
 function SkillIcon({ src, alt }: { src: string; alt: string }) {
   // Use CSS mask and background color for SVG icons
   return (
@@ -25,6 +28,9 @@ function SkillIcon({ src, alt }: { src: string; alt: string }) {
   );
 }
 
+/**
+ * Technical skills section with an infinite marquee of technology icons.
+ */
 export default function TechnicalSkills() {
   return (
     <section id="skills" className="py-30 border-t border-border">

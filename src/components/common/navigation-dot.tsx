@@ -8,6 +8,12 @@ interface NavigationDotProps {
   sectionId: string;
 }
 
+/**
+ * Small square-shaped anchor used in the scroll spy navigation.
+ *
+ * Reflects the active state visually and includes an accessible label for
+ * screen readers.
+ */
 export function NavigationDot({ isActive, sectionId }: NavigationDotProps) {
   return (
     <Link

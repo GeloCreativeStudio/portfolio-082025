@@ -1,9 +1,11 @@
+/** Data model for a single design item in the gallery. */
 export interface DesignItem {
   id: string;
   imageSrc: string;
   imageAlt: string;
 }
 
+/** Curated list of featured design items. */
 export const designs: readonly DesignItem[] = [
   {
     id: 'ALA-ALANG-BANAL-REV',

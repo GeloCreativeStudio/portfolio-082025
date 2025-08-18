@@ -9,6 +9,18 @@ interface ContactFormEmailProps {
   message: string;
 }
 
+/**
+ * React-email template for contact form submissions.
+ *
+ * Renders a simple, branded message including sender name, email, and message
+ * body. Tailwind classes are applied via `@react-email/tailwind` and minimal
+ * inline styles are used for link coloring to ensure broad client support.
+ *
+ * @param props.name Sender display name
+ * @param props.email Sender reply-to email
+ * @param props.message Message body content
+ * @returns An email-ready HTML React tree.
+ */
 export default function ContactFormEmail({
   name,
   email,

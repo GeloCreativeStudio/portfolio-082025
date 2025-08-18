@@ -3,6 +3,9 @@ import { InfiniteSlider } from '@/components/ui/infinite-slider';
 import DesignCard from '../common/design-card';
 import { designs } from '@/lib/data/featured-designs';
 
+/**
+ * Section showcasing selected designs in a horizontally scrolling gallery.
+ */
 export default function FeaturedDesigns() {
   return (
     <section id="designs" className="py-30 border-t border-border">

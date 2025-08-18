@@ -1,8 +1,8 @@
 import { z } from 'zod';
 
 /**
- * Contact form validation schema using Zod
- * Includes honeypot field to prevent spam
+ * Contact form validation schema using Zod.
+ * Includes a honeypot field to help prevent trivial bot submissions.
  */
 export const contactFormSchema = z.object({
   name: z
@@ -24,9 +24,7 @@ export const contactFormSchema = z.object({
 
 export type ContactFormData = z.infer<typeof contactFormSchema>;
 
-/**
- * Validates contact form data from FormData
- */
+/** Validates contact form data extracted from a `FormData` payload. */
 export function validateContactForm(formData: FormData) {
   const data = {
     name: formData.get('name'),

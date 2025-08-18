@@ -1,8 +1,10 @@
+/** Minimal representation of a technology icon and label. */
 export interface TechnicalSkill {
   src: string;
   alt: string;
 }
 
+/** Ordered list of skills used by the technical skills section. */
 export const skillsData: readonly TechnicalSkill[] = [
   { src: '/assets/technical-skills/html5.svg', alt: 'HTML5' },
   { src: '/assets/technical-skills/css3.svg', alt: 'CSS3' },

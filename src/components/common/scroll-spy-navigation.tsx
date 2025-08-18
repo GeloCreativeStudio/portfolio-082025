@@ -5,6 +5,12 @@ import { NavigationDot } from './navigation-dot';
 
 const sections = ['hero', 'about', 'projects', 'designs', 'skills', 'contact'];
 
+/**
+ * Vertical right-side navigation that highlights the section currently in view.
+ *
+ * Uses the `useScrollSpy` hook to compute the active section id, and renders a
+ * stack of `NavigationDot` anchors linking to each section hash.
+ */
 export function ScrollSpyNavigation() {
   const activeSection = useScrollSpy(sections);
 
