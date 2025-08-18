@@ -79,7 +79,7 @@ npm run format  # Prettier format
 Create `.env.local`:
 ```bash
 NEXT_PUBLIC_SITE_URL=https://your-site.com
-NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=your-token  # Optional
+GOOGLE_SITE_VERIFICATION=your-token  # Optional
 RESEND_API_KEY=re_xxx  # Required for contact form
 ```
 
